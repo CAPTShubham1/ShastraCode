@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Shubham Kumar | Corporate Portfolio</title>
+<link rel="stylesheet" href="portfolio.css">
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+
+<header class="header">
+    <nav class="nav">
+        <div class="logo">Shubham Kumar</div>
+        <ul>
+            <li>Home</li>
+            <li>About</li>
+            <li>Services</li>
+            <li>Skills</li>
+            <li>Projects</li>
+            <li>Contact</li>
+        </ul>
+    </nav>
+
+    <div class="hero">
+        <h1>Technology. Strategy. Execution.</h1>
+        <p>Corporate Web Solutions | Digital Marketing | Creative Media Production</p>
+        <a href="#" class="btn-primary">View Portfolio</a>
+    </div>
+</header>
+
+<section class="section about">
+    <h2>About</h2>
+    <p>
+        I deliver scalable digital systems combining software engineering,
+        enterprise design thinking, marketing strategy, and creative production.
+        Focused on performance, precision, and business growth.
+    </p>
+</section>
+                      
+
+<section class="section services">
+    <h2>Corporate Services</h2>
+    <div class="grid">
+        <div class="card reveal">
+            <h3>Software Development</h3>
+            <p>Python, Java, React, Backend APIs, Database Architecture.</p>
+        </div>
+
+        <div class="card reveal">
+            <h3>Digital Marketing</h3>
+            <p>Campaign strategy, brand positioning, performance analytics.</p>
+        </div>
+
+        <div class="card reveal">
+            <h3>Creative Media</h3>
+            <p>Photography, videography, graphic design, branding assets.</p>
+        </div>
+
+        <div class="card reveal">
+            <h3>Business Management</h3>
+            <p>Project coordination, operational planning, documentation.</p>
+        </div>
+    </div>
+</section>
+
+<section class="section skills">
+    <h2>Technical Expertise</h2>
+
+    <div class="skill reveal">
+        <span>Python Development</span>
+        <div class="bar"><div class="fill" style="width:90%"></div></div>
+    </div>
+
+    <div class="skill reveal">
+        <span>React & Frontend</span>
+        <div class="bar"><div class="fill" style="width:85%"></div></div>
+    </div>
+
+    <div class="skill reveal">
+        <span>Digital Marketing Strategy</span>
+        <div class="bar"><div class="fill" style="width:80%"></div></div>
+    </div>
+
+</section>
+
+<section class="section projects">
+    <h2>Featured Projects</h2>
+    <div class="grid">
+        <div class="project-card reveal">
+            <h3>Enterprise Dashboard</h3>
+            <p>Data-driven analytics system with responsive UI.</p>
+        </div>
+        <div class="project-card reveal">
+            <h3>Marketing Automation System</h3>
+            <p>Lead tracking and campaign management platform.</p>
+        </div>
+    </div>
+</section>
+
+<section class="section contact">
+    <h2>Contact</h2>
+    <p>Email: shubham.sharma.kumar312908@gmail.com</p>
+    <p>LinkedIn:www.linkedin.com/in/
+shubham-sharma-759756255 </p>
+</section>
+
+<footer>
+    © 2026 Shubham Kumar | Corporate Technology Portfolio
+</footer>
+
+<script>
+window.addEventListener("scroll", function() {
+    let reveals = document.querySelectorAll(".reveal");
+    reveals.forEach(el => {
+        let windowHeight = window.innerHeight;
+        let elementTop = el.getBoundingClientRect().top;
+        if (elementTop < windowHeight - 100) {
+            el.classList.add("active");
+        }
+    });
+});
+</script>
+
+</body>
+</html>
