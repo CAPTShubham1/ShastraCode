@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ShastraCode | Modern Terms</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<nav>
+    <div class="logo">
+        <a href="#">
+            <img src="WhatsApp Image 2025-12-17 at 12.20.04 AM.jpeg" alt="ShastraCode Logo">
+        </a>
+    </div>
+    
+</nav>
+<body>
+    <nav>
+        <div class="logo">SHASTRA<span>CODE</span></div>
+        <ul>
+            <li><a href="#roadmaps">Roadmaps</a></li>
+            <li><a href="#about">About</a></li>
+            <li><button id="joinBtn" class="join-btn">Join Community</button></li>
+        </ul>
+    </nav>
+    <header>
+        <h1>No Ancient Code. <br>Just <span>Modern Terms.</span></h1>
+        <p>Mastering Java, Python, MySQL and React for the upcoming engineering era.</p>
+        <a href="roadmap.html" class="explore-btn">Explore Roadmaps</a>
+    </header>
+    <section class="comparison-section">
+    <h2>The Shastra Evolution</h2>
+    <div class="toggle-container">
+        <span id="label-ancient">Ancient</span>-i 
+        <label class="switch">
+            <input type="checkbox" id="codeToggle">
+            <span class="slider round"></span>
+        </label>
+        <span id="label-modern">Modern</span>
+    </div>
+    <div class="code-display">
+        <pre id="codeBlock">
+        </pre>
+        <section id="about" class="about-section">
+        <h2>About ShastraCode</h2>
+        <p>ShastraCode is an innovative platform dedicated to transforming traditional coding education into a
+        modern learning experience. We focus on teaching contemporary programming languages and technologies such as 
+        Java, Python, MySQL, and React, preparing learners for the demands of the upcoming engineering era.</p>
+        <p>Our mission is to bridge the gap between ancient coding practices and modern development needs
+        by providing comprehensive roadmaps, hands-on projects, and a supportive community. Join us to embark on a journey
+         of mastering the skills that will define the future of technology.</p>
+        </section>
+    </div>
+    </section>
+    <section id="roadmaps" class="grid">
+    <div class="card" data-image="roadmap-java.jpg">
+        <img src="Road map java.jpg" alt="roadmap-java">
+        <h2>Java</h2>
+        <p>Focus: Loom & GraalVM</p>
+        <span>Upcoming Standard</span>
+    </div>
+
+    <div class="card" data-image="roadmap-python.jpg">
+        <img src="road map of python.jpg" alt="roadmap-python">
+        <h2>Python</h2>
+        <p>Focus: PyTorch & FastAPI</p>
+        <span>Upcoming Standard</span>
+    </div>
+
+    <div class="card" data-image="roadmap-react.png">
+        <img src="road map of react.png" alt="roadmap-react">
+        <h2>React</h2>
+        <p>Focus: Server Components</p>
+        <span>Upcoming Standard</span>
+    </div>
+
+    <div class="card" data-image="roadmap-sql.jpg">
+        <img src="road map of sql.jpg" alt="roadmap-sql">
+        <h2>SQL</h2>
+        <p>Focus: Vector DBs</p>
+        <span>Upcoming Standard</span>
+    </div>
+
+    <div class="card" data-image="roadmap-csharp.png">
+        <img src="roadmap of csharp.jpg" alt="roadmap-c#">
+        <h2>C#</h2>
+        <p>Focus: Backend Development</p>
+        <span>Upcoming Standard</span>
+    </div>
+</section>
+<div id="imageModal" class="modal">
+    <span class="close">&times;</span>
+    <img class="modal-content" id="modalImg">
+</div>
+<script>
+const cards = document.querySelectorAll(".card");
+const modal = document.getElementById("imageModal");
+const modalImg = document.getElementById("modalImg");
+const closeBtn = document.querySelector(".close");
+
+cards.forEach(card => {
+    card.addEventListener("click", () => {
+        modal.style.display = "flex";
+        modalImg.src = card.dataset.image;
+    });
+});
+
+closeBtn.onclick = () => {
+    modal.style.display = "none";
+};
+
+modal.onclick = (e) => {
+    if (e.target === modal) {
+        modal.style.display = "none";
+    }
+};
+</script>
+   <div id="communityModal" class="community-modal">
+    <div class="community-box">
+        <span class="close" id="closeCommunity">&times;</span>
+        <h2>Join Our Community</h2>
+        <!-- Instagram -->
+        <a href="https://ig.me/j/AbYziWUjoGdrCdl3/"
+           target="_blank"
+           class="community-link instagram">
+            Join on Instagram
+        </a>
+        <!-- WhatsApp Channel / Group -->
+        <a href="https://chat.whatsapp.com/Jl9ePzjeTgsHrA8PAnRwOg"
+           target="_blank"
+           class="community-link whatsapp">
+            Join on WhatsApp
+        </a>
+    </div>
+</div>
+
+<script>
+    const joinBtn = document.getElementById('joinBtn');
+    const communityModal = document.getElementById('communityModal');
+    const closeCommunity = document.getElementById('closeCommunity');
+    joinBtn.onclick = () => {
+        communityModal.style.display = 'flex';
+    };
+
+    closeCommunity.onclick = () => {
+        communityModal.style.display = 'none';
+    };
+
+    window.onclick = (e) => {
+        if (e.target === communityModal) {
+            communityModal.style.display = 'none';
+        }
+    };
+</script>
+<div class="center-btn">
+    <li class="portfolio-btn">
+        <a href="portfolio.html">Portfolio</a>
+    </li>
+</div>
+<footer>
+    <p>&copy;  ShastraCode. All rights reserved.</p>
+</footer>
+</body>
+</html>
