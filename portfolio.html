@@ -1,0 +1,749 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Shubham Kumar | Full-Stack Developer & Coding Educator</title>
+    <meta name="description" content="Shubham Kumar — Full-Stack Developer, Founder of ShastraCode. Expert in Java, Python, React, SQL and C#. Building modern tech solutions & teaching the next generation of engineers.">
+    <meta name="keywords" content="Shubham Kumar, ShastraCode, Full Stack Developer, Java, Python, React, SQL, C#, Coding Educator, India">
+    <meta name="author" content="Shubham Kumar">
+    <meta property="og:title" content="Shubham Kumar | Developer & Educator">
+    <meta property="og:description" content="Full-Stack Developer & Founder of ShastraCode — building modern tech and teaching the next generation.">
+    <meta property="og:type" content="website">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=Fira+Code:wght@400;500;600&family=Space+Grotesk:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="portfolio.css">
+</head>
+<body>
+
+<!-- ===================== CURSOR ===================== -->
+<div class="pf-cursor" id="pfCursor"></div>
+<div class="pf-cursor-follower" id="pfCursorFollower"></div>
+
+<!-- ===================== CANVAS PARTICLES ===================== -->
+<canvas id="pfParticles"></canvas>
+
+<!-- ===================== NAVBAR ===================== -->
+<nav id="pf-navbar">
+    <div class="pf-nav-inner">
+        <a href="index.html" class="pf-nav-logo">
+            <div class="pf-logo-icon">SK</div>
+            <span class="pf-logo-text">Shubham<span class="pf-accent"> Kumar</span></span>
+        </a>
+        <ul class="pf-nav-links" id="pfNavLinks">
+            <li><a href="#about"    class="pf-nav-link" data-section="about">About</a></li>
+            <li><a href="#services" class="pf-nav-link" data-section="services">Services</a></li>
+            <li><a href="#skills"   class="pf-nav-link" data-section="skills">Skills</a></li>
+            <li><a href="#projects" class="pf-nav-link" data-section="projects">Projects</a></li>
+            <li><a href="#contact"  class="pf-nav-link pf-nav-cta" data-section="contact">Let's Talk</a></li>
+        </ul>
+        <div class="pf-nav-right">
+            <div class="pf-nav-status">
+                <span class="pf-status-dot"></span>
+                <span>Available</span>
+            </div>
+            <button class="pf-hamburger" id="pfHamburger" aria-label="Open menu">
+                <span></span><span></span><span></span>
+            </button>
+        </div>
+    </div>
+</nav>
+
+<!-- Mobile Nav -->
+<div class="pf-mobile-nav" id="pfMobileNav">
+    <div class="pf-mob-header">
+        <div class="pf-logo-icon">SK</div>
+        <span>Shubham Kumar</span>
+    </div>
+    <a href="#about"    class="pf-mob-link">About</a>
+    <a href="#services" class="pf-mob-link">Services</a>
+    <a href="#skills"   class="pf-mob-link">Skills</a>
+    <a href="#projects" class="pf-mob-link">Projects</a>
+    <a href="#contact"  class="pf-mob-link pf-mob-cta">Let's Talk</a>
+</div>
+
+<!-- ===================== HERO ===================== -->
+<header class="pf-hero" id="home">
+    <div class="pf-hero-bg">
+        <div class="pf-glow pf-glow-1"></div>
+        <div class="pf-glow pf-glow-2"></div>
+        <div class="pf-glow pf-glow-3"></div>
+        <div class="pf-grid-lines"></div>
+    </div>
+
+    <div class="pf-hero-content">
+        <div class="pf-hero-eyebrow">
+            <span class="pf-availability">
+                <span class="pf-dot"></span> Open to opportunities
+            </span>
+            <span class="pf-hero-year">© 2026</span>
+        </div>
+
+        <h1 class="pf-hero-title">
+            <span class="pf-hero-line">Hi, I'm</span>
+            <span class="pf-hero-name pf-gradient-text">Shubham Kumar</span>
+        </h1>
+
+        <div class="pf-typewriter-wrap">
+            <span class="pf-typewriter-prefix">I build &amp; teach </span>
+            <span class="pf-typewriter" id="pfTypewriter"></span>
+            <span class="pf-cursor-blink">|</span>
+        </div>
+
+        <p class="pf-hero-desc">
+            Full-Stack Developer &amp; Founder of <strong>ShastraCode</strong> — building modern tech
+            solutions and teaching the next generation of engineers. Expert in Java, Python, React, SQL &amp; C#.
+        </p>
+
+        <div class="pf-hero-actions">
+            <a href="https://github.com/CAPTShubham1" target="_blank" rel="noopener noreferrer" class="pf-btn-primary">
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M12 0C5.37 0 0 5.37 0 12c0 5.31 3.435 9.795 8.205 11.385.6.105.825-.255.825-.57 0-.285-.015-1.23-.015-2.235-3.015.555-3.795-.735-4.035-1.41-.135-.345-.72-1.41-1.23-1.695-.42-.225-1.02-.78-.015-.795.945-.015 1.62.87 1.845 1.23 1.08 1.815 2.805 1.305 3.495.99.105-.78.42-1.305.765-1.605-2.67-.3-5.46-1.335-5.46-5.925 0-1.305.465-2.385 1.23-3.225-.12-.3-.54-1.53.12-3.18 0 0 1.005-.315 3.3 1.23.96-.27 1.98-.405 3-.405s2.04.135 3 .405c2.295-1.56 3.3-1.23 3.3-1.23.66 1.65.24 2.88.12 3.18.765.84 1.23 1.905 1.23 3.225 0 4.605-2.805 5.625-5.475 5.925.435.375.81 1.095.81 2.22 0 1.605-.015 2.895-.015 3.3 0 .315.225.69.825.57A12.02 12.02 0 0 0 24 12c0-6.63-5.37-12-12-12z"/></svg>
+                View My Work
+            </a>
+            <a href="https://mail.google.com/mail/?view=cm&to=shubham.sharma.kumar312908@gmail.com&su=Hello%20Shubham&body=Hi%20Shubham," target="_blank" rel="noopener noreferrer" class="pf-btn-outline">
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
+                Get In Touch
+            </a>
+        </div>
+
+        <div class="pf-hero-tech">
+            <span class="pf-tech-label">Tech Stack:</span>
+            <div class="pf-tech-pills">
+                <span class="pf-tech-pill">Java</span>
+                <span class="pf-tech-pill">Python</span>
+                <span class="pf-tech-pill">React</span>
+                <span class="pf-tech-pill">SQL</span>
+                <span class="pf-tech-pill">C#</span>
+                <span class="pf-tech-pill">REST APIs</span>
+            </div>
+        </div>
+    </div>
+
+    <div class="pf-hero-visual">
+        <!-- Main Avatar Card -->
+        <div class="pf-avatar-scene">
+            <div class="pf-orbit pf-orbit-1">
+                <div class="pf-orbit-dot"></div>
+            </div>
+            <div class="pf-orbit pf-orbit-2">
+                <div class="pf-orbit-dot pf-orbit-dot-2"></div>
+            </div>
+            <div class="pf-orbit pf-orbit-3">
+                <div class="pf-orbit-dot pf-orbit-dot-3"></div>
+            </div>
+
+            <div class="pf-avatar-card">
+                <div class="pf-avatar-glow"></div>
+                <div class="pf-avatar-circle">
+                    <span>SK</span>
+                </div>
+                <div class="pf-avatar-info">
+                    <strong>Shubham Kumar</strong>
+                    <span>Full-Stack Dev &amp; Educator</span>
+                </div>
+                <div class="pf-avatar-badge">
+                    <span class="pf-dot"></span> Available for hire
+                </div>
+                <div class="pf-avatar-stats">
+                    <div class="pf-as">
+                        <span class="pf-as-num">10+</span>
+                        <span class="pf-as-lbl">Projects</span>
+                    </div>
+                    <div class="pf-as-sep"></div>
+                    <div class="pf-as">
+                        <span class="pf-as-num">1K+</span>
+                        <span class="pf-as-lbl">Students</span>
+                    </div>
+                    <div class="pf-as-sep"></div>
+                    <div class="pf-as">
+                        <span class="pf-as-num">2+</span>
+                        <span class="pf-as-lbl">Years</span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Floating pills -->
+            <div class="pf-float-pill pf-pill-1">☕ Java Expert</div>
+            <div class="pf-float-pill pf-pill-2">🐍 Python</div>
+            <div class="pf-float-pill pf-pill-3">⚛️ React Dev</div>
+            <div class="pf-float-pill pf-pill-4">🗄️ SQL</div>
+        </div>
+    </div>
+
+    <!-- Scroll indicator -->
+    <div class="pf-scroll-hint">
+        <span>Scroll</span>
+        <div class="pf-scroll-line"></div>
+    </div>
+</header>
+
+<!-- ===================== MARQUEE STATS ===================== -->
+<div class="pf-marquee-bar">
+    <div class="pf-marquee-track">
+        <span>5+ Programming Languages</span>
+        <span class="pf-mx">✦</span>
+        <span>10+ Projects Built</span>
+        <span class="pf-mx">✦</span>
+        <span>1,000+ Students Taught</span>
+        <span class="pf-mx">✦</span>
+        <span>2+ Years Experience</span>
+        <span class="pf-mx">✦</span>
+        <span>ShastraCode Founder</span>
+        <span class="pf-mx">✦</span>
+        <span>Full-Stack Developer</span>
+        <span class="pf-mx">✦</span>
+        <span>Coding Educator</span>
+        <span class="pf-mx">✦</span>
+        <!-- Duplicate for seamless loop -->
+        <span>5+ Programming Languages</span>
+        <span class="pf-mx">✦</span>
+        <span>10+ Projects Built</span>
+        <span class="pf-mx">✦</span>
+        <span>1,000+ Students Taught</span>
+        <span class="pf-mx">✦</span>
+        <span>2+ Years Experience</span>
+        <span class="pf-mx">✦</span>
+        <span>ShastraCode Founder</span>
+        <span class="pf-mx">✦</span>
+        <span>Full-Stack Developer</span>
+        <span class="pf-mx">✦</span>
+        <span>Coding Educator</span>
+        <span class="pf-mx">✦</span>
+    </div>
+</div>
+
+<!-- ===================== ABOUT ===================== -->
+<section id="about" class="pf-section pf-about">
+    <div class="pf-section-inner pf-about-inner">
+        <div class="pf-about-left pf-reveal">
+            <div class="pf-section-eyebrow">
+                <div class="pf-eyebrow-line"></div>
+                <span>About Me</span>
+            </div>
+            <h2 class="pf-section-title">Who <span class="pf-gradient-text">Am I?</span></h2>
+            <p>I'm a full-stack developer and the founder of <strong>ShastraCode</strong> — a modern coding education platform dedicated to making programming accessible and industry-relevant.</p>
+            <p>My approach bridges enterprise software engineering with practical learning — combining clean code, design thinking, and real-world project experience to deliver value for both clients and students.</p>
+
+            <div class="pf-about-highlights">
+                <div class="pf-highlight-item">
+                    <div class="pf-hi-icon">🚀</div>
+                    <div>
+                        <strong>Builder</strong>
+                        <span>Scalable systems &amp; modern web apps</span>
+                    </div>
+                </div>
+                <div class="pf-highlight-item">
+                    <div class="pf-hi-icon">🎓</div>
+                    <div>
+                        <strong>Educator</strong>
+                        <span>Teaching 1000+ aspiring engineers</span>
+                    </div>
+                </div>
+                <div class="pf-highlight-item">
+                    <div class="pf-hi-icon">💡</div>
+                    <div>
+                        <strong>Innovator</strong>
+                        <span>Creative solutions for modern problems</span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="pf-about-tags">
+                <span>Software Engineering</span>
+                <span>Education</span>
+                <span>Digital Marketing</span>
+                <span>Creative Media</span>
+            </div>
+        </div>
+
+        <div class="pf-about-right pf-reveal">
+            <div class="pf-info-card">
+                <div class="pf-info-card-header">
+                    <div class="pf-ic-avatar">SK</div>
+                    <div>
+                        <strong>Shubham Kumar</strong>
+                        <span>Full-Stack Dev &amp; Educator</span>
+                    </div>
+                </div>
+                <div class="pf-info-divider"></div>
+                <div class="pf-info-rows">
+                    <div class="pf-info-row">
+                        <span class="pf-info-icon">📍</span>
+                        <div>
+                            <small>Location</small>
+                            <strong>India</strong>
+                        </div>
+                    </div>
+                    <div class="pf-info-row">
+                        <span class="pf-info-icon">💼</span>
+                        <div>
+                            <small>Role</small>
+                            <strong>Developer &amp; Educator</strong>
+                        </div>
+                    </div>
+                    <div class="pf-info-row">
+                        <span class="pf-info-icon">🎓</span>
+                        <div>
+                            <small>Platform</small>
+                            <strong>ShastraCode</strong>
+                        </div>
+                    </div>
+                    <div class="pf-info-row">
+                        <span class="pf-info-icon">📧</span>
+                        <div>
+                            <small>Email</small>
+                            <strong><a href="https://mail.google.com/mail/?view=cm&to=shubham.sharma.kumar312908@gmail.com&su=Hello%20Shubham&body=Hi%20Shubham," target="_blank" rel="noopener noreferrer">shubham.sharma.kumar312908@gmail.com</a></strong>
+                        </div>
+                    </div>
+                    <div class="pf-info-row">
+                        <span class="pf-info-icon">🔗</span>
+                        <div>
+                            <small>LinkedIn</small>
+                            <strong><a href="https://www.linkedin.com/in/shubham-sharma-759756255" target="_blank" rel="noopener noreferrer">shubham-sharma-759756255</a></strong>
+                        </div>
+                    </div>
+                </div>
+                <a href="https://mail.google.com/mail/?view=cm&to=shubham.sharma.kumar312908@gmail.com&su=Hello%20Shubham&body=Hi%20Shubham," target="_blank" rel="noopener noreferrer" class="pf-btn-primary pf-btn-block">
+                    <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
+                    Hire Me
+                </a>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- ===================== SERVICES ===================== -->
+<section id="services" class="pf-section pf-services">
+    <div class="pf-section-header pf-reveal">
+        <div class="pf-section-eyebrow">
+            <div class="pf-eyebrow-line"></div>
+            <span>What I Do</span>
+        </div>
+        <h2 class="pf-section-title">Corporate <span class="pf-gradient-text">Services</span></h2>
+        <p>End-to-end digital solutions for businesses and learners</p>
+    </div>
+
+    <div class="pf-services-grid">
+        <div class="pf-service-card pf-reveal" data-color="blue">
+            <div class="pf-service-number">01</div>
+            <div class="pf-service-icon pf-si-blue">
+                <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="16 18 22 12 16 6"/><polyline points="8 6 2 12 8 18"/></svg>
+            </div>
+            <h3>Software Development</h3>
+            <p>Full-stack applications using Python, Java, React, and modern backend APIs with scalable database architecture.</p>
+            <div class="pf-service-tags">
+                <span>Python</span><span>Java</span><span>React</span><span>REST APIs</span>
+            </div>
+            <div class="pf-service-arrow">→</div>
+        </div>
+
+        <div class="pf-service-card pf-reveal" data-color="pink">
+            <div class="pf-service-number">02</div>
+            <div class="pf-service-icon pf-si-pink">
+                <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 12h-4l-3 9L9 3l-3 9H2"/></svg>
+            </div>
+            <h3>Digital Marketing</h3>
+            <p>Campaign strategy, brand positioning, performance analytics, and social media growth for modern businesses.</p>
+            <div class="pf-service-tags">
+                <span>Strategy</span><span>Analytics</span><span>Branding</span><span>SEO</span>
+            </div>
+            <div class="pf-service-arrow">→</div>
+        </div>
+
+        <div class="pf-service-card pf-reveal" data-color="purple">
+            <div class="pf-service-number">03</div>
+            <div class="pf-service-icon pf-si-purple">
+                <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="3" width="18" height="18" rx="2"/><circle cx="8.5" cy="8.5" r="1.5"/><polyline points="21 15 16 10 5 21"/></svg>
+            </div>
+            <h3>Creative Media</h3>
+            <p>Photography, videography, graphic design and comprehensive branding asset creation for impactful visual storytelling.</p>
+            <div class="pf-service-tags">
+                <span>Design</span><span>Photography</span><span>Video</span><span>Branding</span>
+            </div>
+            <div class="pf-service-arrow">→</div>
+        </div>
+
+        <div class="pf-service-card pf-reveal" data-color="orange">
+            <div class="pf-service-number">04</div>
+            <div class="pf-service-icon pf-si-orange">
+                <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></svg>
+            </div>
+            <h3>Coding Education</h3>
+            <p>Structured roadmaps, live sessions, and community learning at ShastraCode for aspiring developers and engineers.</p>
+            <div class="pf-service-tags">
+                <span>Mentoring</span><span>Roadmaps</span><span>Community</span><span>Live Sessions</span>
+            </div>
+            <div class="pf-service-arrow">→</div>
+        </div>
+    </div>
+</section>
+
+<!-- ===================== SKILLS ===================== -->
+<section id="skills" class="pf-section pf-skills-section">
+    <div class="pf-section-header pf-reveal">
+        <div class="pf-section-eyebrow">
+            <div class="pf-eyebrow-line"></div>
+            <span>Expertise</span>
+        </div>
+        <h2 class="pf-section-title">Technical <span class="pf-gradient-text">Skills</span></h2>
+        <p>Technologies I work with daily</p>
+    </div>
+
+    <div class="pf-skills-layout">
+        <!-- Skill Bars -->
+        <div class="pf-skill-bars pf-reveal">
+            <div class="pf-skill-item" data-pct="90">
+                <div class="pf-skill-header">
+                    <div class="pf-skill-name">
+                        <span class="pf-skill-emoji">🐍</span>
+                        Python Development
+                    </div>
+                    <span class="pf-skill-pct">90%</span>
+                </div>
+                <div class="pf-skill-bar">
+                    <div class="pf-skill-fill" data-w="90%"></div>
+                </div>
+            </div>
+
+            <div class="pf-skill-item" data-pct="85">
+                <div class="pf-skill-header">
+                    <div class="pf-skill-name">
+                        <span class="pf-skill-emoji">⚛️</span>
+                        React &amp; Frontend
+                    </div>
+                    <span class="pf-skill-pct">85%</span>
+                </div>
+                <div class="pf-skill-bar">
+                    <div class="pf-skill-fill" data-w="85%"></div>
+                </div>
+            </div>
+
+            <div class="pf-skill-item" data-pct="80">
+                <div class="pf-skill-header">
+                    <div class="pf-skill-name">
+                        <span class="pf-skill-emoji">☕</span>
+                        Java Development
+                    </div>
+                    <span class="pf-skill-pct">80%</span>
+                </div>
+                <div class="pf-skill-bar">
+                    <div class="pf-skill-fill" data-w="80%"></div>
+                </div>
+            </div>
+
+            <div class="pf-skill-item" data-pct="75">
+                <div class="pf-skill-header">
+                    <div class="pf-skill-name">
+                        <span class="pf-skill-emoji">🗄️</span>
+                        SQL &amp; Databases
+                    </div>
+                    <span class="pf-skill-pct">75%</span>
+                </div>
+                <div class="pf-skill-bar">
+                    <div class="pf-skill-fill" data-w="75%"></div>
+                </div>
+            </div>
+
+            <div class="pf-skill-item" data-pct="80">
+                <div class="pf-skill-header">
+                    <div class="pf-skill-name">
+                        <span class="pf-skill-emoji">📊</span>
+                        Digital Marketing
+                    </div>
+                    <span class="pf-skill-pct">80%</span>
+                </div>
+                <div class="pf-skill-bar">
+                    <div class="pf-skill-fill" data-w="80%"></div>
+                </div>
+            </div>
+
+            <div class="pf-skill-item" data-pct="70">
+                <div class="pf-skill-header">
+                    <div class="pf-skill-name">
+                        <span class="pf-skill-emoji">🔷</span>
+                        C# &amp; Backend Dev
+                    </div>
+                    <span class="pf-skill-pct">70%</span>
+                </div>
+                <div class="pf-skill-bar">
+                    <div class="pf-skill-fill" data-w="70%"></div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Tech Radial / Cards -->
+        <div class="pf-tech-cards pf-reveal">
+            <div class="pf-tech-card pf-tc-blue">
+                <span class="pf-tc-icon">☕</span>
+                <strong>Java</strong>
+                <small>Backend Dev</small>
+            </div>
+            <div class="pf-tech-card pf-tc-green">
+                <span class="pf-tc-icon">🐍</span>
+                <strong>Python</strong>
+                <small>Data &amp; APIs</small>
+            </div>
+            <div class="pf-tech-card pf-tc-cyan">
+                <span class="pf-tc-icon">⚛️</span>
+                <strong>React</strong>
+                <small>Frontend</small>
+            </div>
+            <div class="pf-tech-card pf-tc-orange">
+                <span class="pf-tc-icon">🗄️</span>
+                <strong>SQL</strong>
+                <small>Databases</small>
+            </div>
+            <div class="pf-tech-card pf-tc-purple">
+                <span class="pf-tc-icon">🔷</span>
+                <strong>C#</strong>
+                <small>.NET Dev</small>
+            </div>
+            <div class="pf-tech-card pf-tc-pink">
+                <span class="pf-tc-icon">📡</span>
+                <strong>REST APIs</strong>
+                <small>Integration</small>
+            </div>
+            <div class="pf-tech-card pf-tc-yellow">
+                <span class="pf-tc-icon">🎨</span>
+                <strong>UI/UX</strong>
+                <small>Design</small>
+            </div>
+            <div class="pf-tech-card pf-tc-teal">
+                <span class="pf-tc-icon">📈</span>
+                <strong>Analytics</strong>
+                <small>Insights</small>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- ===================== PROJECTS ===================== -->
+<section id="projects" class="pf-section pf-projects-section">
+    <div class="pf-section-header pf-reveal">
+        <div class="pf-section-eyebrow">
+            <div class="pf-eyebrow-line"></div>
+            <span>Portfolio</span>
+        </div>
+        <h2 class="pf-section-title">Featured <span class="pf-gradient-text">Projects</span></h2>
+        <p>A selection of work I'm proud of</p>
+    </div>
+
+    <div class="pf-projects-grid">
+
+        <div class="pf-project-card pf-reveal pf-pc-featured">
+            <div class="pf-project-badge">⭐ Featured</div>
+            <div class="pf-project-top">
+                <span class="pf-project-num">01</span>
+                <div class="pf-project-links">
+                    <a href="index.html" title="View Live" class="pf-icon-btn">
+                        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/><polyline points="15 3 21 3 21 9"/><line x1="10" y1="14" x2="21" y2="3"/></svg>
+                    </a>
+                </div>
+            </div>
+            <div class="pf-project-icon pf-pi-blue">🎓</div>
+            <h3>ShastraCode Platform</h3>
+            <p>A complete modern coding education platform with interactive roadmaps, community features, and a curated learning path for Java, Python, React, SQL and C#.</p>
+            <div class="pf-project-stack">
+                <span>HTML</span><span>CSS</span><span>JavaScript</span>
+            </div>
+        </div>
+
+        <div class="pf-project-card pf-reveal">
+            <div class="pf-project-top">
+                <span class="pf-project-num">02</span>
+                <div class="pf-project-links">
+                    <a href="#" title="View Project" class="pf-icon-btn">
+                        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/><polyline points="15 3 21 3 21 9"/><line x1="10" y1="14" x2="21" y2="3"/></svg>
+                    </a>
+                </div>
+            </div>
+            <div class="pf-project-icon pf-pi-purple">📊</div>
+            <h3>Enterprise Dashboard</h3>
+            <p>Data-driven analytics system with a fully responsive UI, real-time chart updates, and role-based access control for business intelligence.</p>
+            <div class="pf-project-stack">
+                <span>React</span><span>Python</span><span>SQL</span>
+            </div>
+        </div>
+
+        <div class="pf-project-card pf-reveal">
+            <div class="pf-project-top">
+                <span class="pf-project-num">03</span>
+                <div class="pf-project-links">
+                    <a href="#" title="View Project" class="pf-icon-btn">
+                        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/><polyline points="15 3 21 3 21 9"/><line x1="10" y1="14" x2="21" y2="3"/></svg>
+                    </a>
+                </div>
+            </div>
+            <div class="pf-project-icon pf-pi-pink">📣</div>
+            <h3>Marketing Automation</h3>
+            <p>Lead tracking and campaign management platform with automated outreach pipelines, performance dashboards, and CRM integrations.</p>
+            <div class="pf-project-stack">
+                <span>Java</span><span>REST API</span><span>Analytics</span>
+            </div>
+        </div>
+
+        <div class="pf-project-card pf-reveal">
+            <div class="pf-project-top">
+                <span class="pf-project-num">04</span>
+                <div class="pf-project-links">
+                    <a href="roadmap.html" title="View Roadmaps" class="pf-icon-btn">
+                        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/><polyline points="15 3 21 3 21 9"/><line x1="10" y1="14" x2="21" y2="3"/></svg>
+                    </a>
+                </div>
+            </div>
+            <div class="pf-project-icon pf-pi-orange">🗺️</div>
+            <h3>Tech Roadmap Library</h3>
+            <p>Curated visual roadmaps for Java, Python, React, SQL, and C# — helping students navigate the modern engineering landscape step by step.</p>
+            <div class="pf-project-stack">
+                <span>Content</span><span>Education</span><span>Community</span>
+            </div>
+        </div>
+
+    </div>
+</section>
+
+<!-- ===================== TESTIMONIAL / CALL TO ACTION ===================== -->
+<section class="pf-cta-section">
+    <div class="pf-cta-glow"></div>
+    <div class="pf-cta-inner pf-reveal">
+        <div class="pf-cta-badge">🤝 Let's Collaborate</div>
+        <h2>Ready to Build <span class="pf-gradient-text">Something Great?</span></h2>
+        <p>Whether you need a scalable software solution, digital marketing strategy, or coding mentorship — I'm here to help you succeed.</p>
+        <div class="pf-cta-actions">
+            <a href="https://mail.google.com/mail/?view=cm&to=shubham.sharma.kumar312908@gmail.com&su=Hello%20Shubham&body=Hi%20Shubham," target="_blank" rel="noopener noreferrer" class="pf-btn-primary pf-btn-lg">
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
+                Start a Project
+            </a>
+            <a href="https://www.linkedin.com/in/shubham-sharma-759756255" target="_blank" rel="noopener noreferrer" class="pf-btn-outline pf-btn-lg">
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433a2.062 2.062 0 0 1-2.063-2.065 2.064 2.064 0 1 1 2.063 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/></svg>
+                Connect on LinkedIn
+            </a>
+        </div>
+    </div>
+</section>
+
+<!-- ===================== CONTACT ===================== -->
+<section id="contact" class="pf-section pf-contact-section">
+    <div class="pf-section-header pf-reveal">
+        <div class="pf-section-eyebrow">
+            <div class="pf-eyebrow-line"></div>
+            <span>Get In Touch</span>
+        </div>
+        <h2 class="pf-section-title">Let's <span class="pf-gradient-text">Connect</span></h2>
+        <p>I'm open to freelance work, collaborations, and teaching opportunities</p>
+    </div>
+
+    <div class="pf-contact-grid">
+        <!-- Email -->
+        <a href="https://mail.google.com/mail/?view=cm&to=shubham.sharma.kumar312908@gmail.com&su=Hello%20Shubham&body=Hi%20Shubham,"
+           target="_blank" rel="noopener noreferrer"
+           class="pf-contact-card pf-cc-email pf-reveal" id="pfEmailCard">
+            <div class="pf-cc-bg"></div>
+            <div class="pf-contact-icon pf-ci-email">
+                <svg viewBox="0 0 32 32" fill="currentColor" width="28" height="28">
+                    <path d="M28 6H4a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h24a2 2 0 0 0 2-2V8a2 2 0 0 0-2-2zm-1.2 2L16 15.77 5.2 8h21.6zM4 24V9.37l11.45 8.26a1 1 0 0 0 1.1 0L28 9.37V24H4z"/>
+                </svg>
+            </div>
+            <h3>Email Me</h3>
+            <p>shubham.sharma.kumar312908@gmail.com</p>
+            <span class="pf-contact-cta">Send Email <span class="pf-cc-arrow">→</span></span>
+        </a>
+
+        <!-- WhatsApp -->
+        <a href="https://wa.me/917652824173?text=Hi%20Shubham!%20I'd%20like%20to%20connect."
+           target="_blank" rel="noopener noreferrer"
+           class="pf-contact-card pf-cc-wa pf-reveal" id="pfWhatsappCard">
+            <div class="pf-cc-bg"></div>
+            <div class="pf-contact-icon pf-ci-wa">
+                <svg viewBox="0 0 32 32" fill="currentColor" width="28" height="28">
+                    <path d="M16 1C7.73 1 1 7.73 1 16c0 2.82.74 5.45 2.03 7.74L1 31l7.49-2.02A15 15 0 0 0 16 31c8.27 0 15-6.73 15-15S24.27 1 16 1zm6.85 18.18c-.37-.19-2.21-1.09-2.55-1.21-.34-.12-.59-.19-.84.19-.25.37-.96 1.21-1.18 1.46-.21.25-.43.28-.8.09-.37-.19-1.57-.58-2.99-1.85-1.1-.98-1.85-2.2-2.07-2.57-.21-.37-.02-.57.16-.75.17-.17.37-.43.56-.65.19-.22.25-.37.37-.62.12-.25.06-.47-.03-.65-.09-.19-.84-2.02-1.15-2.77-.3-.72-.61-.62-.84-.63-.21-.01-.46-.01-.71-.01-.25 0-.65.09-.99.47-.34.37-1.3 1.27-1.3 3.1s1.33 3.6 1.52 3.85c.19.25 2.62 4 6.35 5.45.89.38 1.58.61 2.12.78.89.28 1.7.24 2.34.15.71-.11 2.21-.9 2.52-1.78.31-.87.31-1.62.22-1.78-.09-.16-.34-.25-.71-.44z"/>
+                </svg>
+            </div>
+            <h3>WhatsApp</h3>
+            <p>Quick responses for project discussions and collaboration opportunities.</p>
+            <span class="pf-contact-cta">Open Chat <span class="pf-cc-arrow">→</span></span>
+        </a>
+
+        <!-- LinkedIn -->
+        <a href="https://www.linkedin.com/in/shubham-sharma-759756255"
+           target="_blank" rel="noopener noreferrer"
+           class="pf-contact-card pf-cc-li pf-reveal" id="pfLinkedinCard">
+            <div class="pf-cc-bg"></div>
+            <div class="pf-contact-icon pf-ci-li">
+                <svg viewBox="0 0 24 24" fill="currentColor" width="28" height="28">
+                    <path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433a2.062 2.062 0 0 1-2.063-2.065 2.064 2.064 0 1 1 2.063 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/>
+                </svg>
+            </div>
+            <h3>LinkedIn</h3>
+            <p>Connect professionally to explore partnerships and industry opportunities.</p>
+            <span class="pf-contact-cta">View Profile <span class="pf-cc-arrow">→</span></span>
+        </a>
+    </div>
+</section>
+
+<!-- ===================== FLOATING WHATSAPP ===================== -->
+<a href="https://wa.me/917652824173?text=Hi%20Shubham!%20I'd%20like%20to%20connect."
+   target="_blank" rel="noopener noreferrer"
+   class="pf-wa-float" id="pfWaFloat" aria-label="Chat on WhatsApp">
+    <svg viewBox="0 0 32 32" fill="white" width="26" height="26">
+        <path d="M16 1C7.73 1 1 7.73 1 16c0 2.82.74 5.45 2.03 7.74L1 31l7.49-2.02A15 15 0 0 0 16 31c8.27 0 15-6.73 15-15S24.27 1 16 1zm6.85 18.18c-.37-.19-2.21-1.09-2.55-1.21-.34-.12-.59-.19-.84.19-.25.37-.96 1.21-1.18 1.46-.21.25-.43.28-.8.09-.37-.19-1.57-.58-2.99-1.85-1.1-.98-1.85-2.2-2.07-2.57-.21-.37-.02-.57.16-.75.17-.17.37-.43.56-.65.19-.22.25-.37.37-.62.12-.25.06-.47-.03-.65-.09-.19-.84-2.02-1.15-2.77-.3-.72-.61-.62-.84-.63-.21-.01-.46-.01-.71-.01-.25 0-.65.09-.99.47-.34.37-1.3 1.27-1.3 3.1s1.33 3.6 1.52 3.85c.19.25 2.62 4 6.35 5.45.89.38 1.58.61 2.12.78.89.28 1.7.24 2.34.15.71-.11 2.21-.9 2.52-1.78.31-.87.31-1.62.22-1.78-.09-.16-.34-.25-.71-.44z"/>
+    </svg>
+    <span class="pf-wa-tooltip">Chat with me!</span>
+</a>
+
+<!-- ===================== FOOTER ===================== -->
+<footer class="pf-footer">
+    <div class="pf-footer-glow"></div>
+    <div class="pf-footer-inner">
+        <div class="pf-footer-brand">
+            <div class="pf-footer-logo">
+                <div class="pf-logo-icon">SK</div>
+                <span>Shubham <span class="pf-gradient-text">Kumar</span></span>
+            </div>
+            <p>Full-Stack Developer &amp; Coding Educator at ShastraCode. Building modern tech &amp; teaching the next generation of engineers.</p>
+            <div class="pf-footer-socials">
+                <a href="https://mail.google.com/mail/?view=cm&to=shubham.sharma.kumar312908@gmail.com&su=Hello%20Shubham&body=Hi%20Shubham," target="_blank" rel="noopener noreferrer" aria-label="Email" class="pf-social pf-social-email">
+                    <svg viewBox="0 0 32 32" fill="currentColor" width="16" height="16"><path d="M28 6H4a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h24a2 2 0 0 0 2-2V8a2 2 0 0 0-2-2zm-1.2 2L16 15.77 5.2 8h21.6zM4 24V9.37l11.45 8.26a1 1 0 0 0 1.1 0L28 9.37V24H4z"/></svg>
+                </a>
+                <a href="https://www.linkedin.com/in/shubham-sharma-759756255" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn" class="pf-social pf-social-li">
+                    <svg viewBox="0 0 24 24" fill="currentColor" width="16" height="16"><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433a2.062 2.062 0 0 1-2.063-2.065 2.064 2.064 0 1 1 2.063 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/></svg>
+                </a>
+                <a href="https://wa.me/917652824173" target="_blank" rel="noopener noreferrer" aria-label="WhatsApp" class="pf-social pf-social-wa">
+                    <svg viewBox="0 0 32 32" fill="currentColor" width="16" height="16"><path d="M16 1C7.73 1 1 7.73 1 16c0 2.82.74 5.45 2.03 7.74L1 31l7.49-2.02A15 15 0 0 0 16 31c8.27 0 15-6.73 15-15S24.27 1 16 1zm6.85 18.18c-.37-.19-2.21-1.09-2.55-1.21-.34-.12-.59-.19-.84.19-.25.37-.96 1.21-1.18 1.46-.21.25-.43.28-.8.09-.37-.19-1.57-.58-2.99-1.85-1.1-.98-1.85-2.2-2.07-2.57-.21-.37-.02-.57.16-.75.17-.17.37-.43.56-.65.19-.22.25-.37.37-.62.12-.25.06-.47-.03-.65-.09-.19-.84-2.02-1.15-2.77-.3-.72-.61-.62-.84-.63-.21-.01-.46-.01-.71-.01-.25 0-.65.09-.99.47-.34.37-1.3 1.27-1.3 3.1s1.33 3.6 1.52 3.85c.19.25 2.62 4 6.35 5.45.89.38 1.58.61 2.12.78.89.28 1.7.24 2.34.15.71-.11 2.21-.9 2.52-1.78.31-.87.31-1.62.22-1.78-.09-.16-.34-.25-.71-.44z"/></svg>
+                </a>
+                <a href="https://ig.me/j/AbYziWUjoGdrCdl3/" target="_blank" rel="noopener noreferrer" aria-label="Instagram" class="pf-social pf-social-ig">
+                    <svg viewBox="0 0 24 24" fill="currentColor" width="16" height="16"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zM12 0C8.741 0 8.333.014 7.053.072 2.695.272.273 2.69.073 7.052.014 8.333 0 8.741 0 12c0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98C8.333 23.986 8.741 24 12 24c3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98C15.668.014 15.259 0 12 0zm0 5.838a6.162 6.162 0 1 0 0 12.324 6.162 6.162 0 0 0 0-12.324zM12 16a4 4 0 1 1 0-8 4 4 0 0 1 0 8zm6.406-11.845a1.44 1.44 0 1 0 0 2.881 1.44 1.44 0 0 0 0-2.881z"/></svg>
+                </a>
+            </div>
+        </div>
+        <div class="pf-footer-col">
+            <strong>Navigation</strong>
+            <a href="#about">About</a>
+            <a href="#services">Services</a>
+            <a href="#skills">Skills</a>
+            <a href="#projects">Projects</a>
+            <a href="#contact">Contact</a>
+        </div>
+        <div class="pf-footer-col">
+            <strong>ShastraCode</strong>
+            <a href="index.html">Home</a>
+            <a href="roadmap.html">Roadmaps</a>
+            <a href="https://chat.whatsapp.com/DwNeKzcWSHOH3y70Utm0xL" target="_blank" rel="noopener noreferrer">Community</a>
+        </div>
+        <div class="pf-footer-col">
+            <strong>Contact</strong>
+            <a href="https://mail.google.com/mail/?view=cm&to=shubham.sharma.kumar312908@gmail.com&su=Hello%20Shubham&body=Hi%20Shubham," target="_blank" rel="noopener noreferrer">Email Me</a>
+            <a href="https://wa.me/917652824173" target="_blank" rel="noopener noreferrer">WhatsApp</a>
+            <a href="https://www.linkedin.com/in/shubham-sharma-759756255" target="_blank" rel="noopener noreferrer">LinkedIn</a>
+        </div>
+    </div>
+    <div class="pf-footer-bottom">
+        <p>&copy; 2026 Shubham Kumar &bull; ShastraCode. All rights reserved.</p>
+        <p class="pf-footer-love">Built with <span>❤️</span> in India</p>
+    </div>
+</footer>
+
+<script src="portfolio.js"></script>
+</body>
+</html>

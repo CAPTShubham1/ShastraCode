@@ -1,0 +1,37 @@
+body {
+    background: #0d1117;
+    color: white;
+    font-family: Arial, sans-serif;
+    text-align: center;
+}
+
+.title {
+    margin-top: 30px;
+    font-size: 32px;
+}
+
+.roadmap-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 30px;
+    margin: 40px;
+}
+
+.roadmap-card {
+    background: #161b22;
+    padding: 20px;
+    border-radius: 10px;
+    width: 300px;
+    transition: 0.3s;
+}
+
+.roadmap-card:hover {
+    transform: scale(1.05);
+    box-shadow: 0 0 15px #58a6ff;
+}
+
+.roadmap-card img {
+    width: 100%;
+    border-radius: 8px;
+}

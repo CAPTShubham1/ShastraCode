@@ -1,0 +1,373 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ShastraCode | Modern Terms</title>
+    <meta name="description" content="ShastraCode — mastering Java, Python, MySQL, React and C# for the upcoming engineering era. Join our community today.">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;900&family=Fira+Code:wght@400;500&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<!-- ===================== NAVBAR ===================== -->
+<nav id="navbar">
+    <div class="nav-inner">
+        <a href="#" class="logo-wrap">
+            <img src="WhatsApp Image 2025-12-17 at 12.20.04 AM.jpeg" alt="ShastraCode Logo" class="logo-img">
+            <span class="logo-text">SHASTRA<span class="accent">CODE</span></span>
+        </a>
+        <ul class="nav-links">
+            <li><a href="#roadmaps" class="nav-link">Roadmaps</a></li>
+            <li><a href="#about" class="nav-link">About</a></li>
+            <li><a href="#contact" class="nav-link">Contact</a></li>
+            <li><button id="joinBtn" class="join-btn">Join Community</button></li>
+        </ul>
+        <button class="hamburger" id="hamburger" aria-label="Open menu">
+            <span></span><span></span><span></span>
+        </button>
+    </div>
+</nav>
+
+<!-- Mobile Nav -->
+<div class="mobile-nav" id="mobileNav">
+    <a href="#roadmaps" class="mob-link">Roadmaps</a>
+    <a href="#about" class="mob-link">About</a>
+    <a href="#contact" class="mob-link">Contact</a>
+    <button id="joinBtnMob" class="join-btn mob-join">Join Community</button>
+</div>
+
+<!-- ===================== HERO ===================== -->
+<header class="hero" id="hero">
+    <div class="hero-glow glow-1"></div>
+    <div class="hero-glow glow-2"></div>
+    <div class="hero-content">
+        <div class="badge">&#x1F680; The Future of Coding Education</div>
+        <h1>No Ancient Code.<br>Just <span class="gradient-text">Modern Terms.</span></h1>
+        <p class="hero-sub">Mastering Java, Python, MySQL, React &amp; C# for the upcoming engineering era.</p>
+        <div class="hero-actions">
+            <a href="#roadmaps" class="btn-primary">Explore Roadmaps</a>
+            <button id="joinBtnHero" class="btn-ghost">Join Community</button>
+        </div>
+    </div>
+    <div class="hero-visual">
+        <div class="code-float">
+            <div class="code-float-header">
+                <span class="code-dot-r"></span>
+                <span class="code-dot-y"></span>
+                <span class="code-dot-g"></span>
+            </div>
+            <pre class="hero-code"><span class="c-blue">class</span> <span class="c-yellow">ShastraCode</span> {
+  <span class="c-blue">const</span> future = [
+    <span class="c-green">"Java"</span>,
+    <span class="c-green">"Python"</span>,
+    <span class="c-green">"React"</span>,
+    <span class="c-green">"SQL"</span>,
+    <span class="c-green">"C#"</span>
+  ];
+  <span class="c-blue">return</span> future.<span class="c-yellow">map</span>(
+    lang =&gt; <span class="c-green">`master(${lang})`</span>
+  );
+}</pre>
+        </div>
+    </div>
+</header>
+
+<!-- ===================== STATS STRIP ===================== -->
+<section class="stats-strip">
+    <div class="stat">
+        <span class="stat-num">5+</span>
+        <span class="stat-label">Languages</span>
+    </div>
+    <div class="stat-divider"></div>
+    <div class="stat">
+        <span class="stat-num">1K+</span>
+        <span class="stat-label">Community Members</span>
+    </div>
+    <div class="stat-divider"></div>
+    <div class="stat">
+        <span class="stat-num">100%</span>
+        <span class="stat-label">Free Resources</span>
+    </div>
+    <div class="stat-divider"></div>
+    <div class="stat">
+        <span class="stat-num">2025</span>
+        <span class="stat-label">Industry Ready</span>
+    </div>
+</section>
+
+<!-- ===================== EVOLUTION SECTION ===================== -->
+<section class="evolution-section" id="evolution">
+    <div class="section-header">
+        <span class="section-tag">Interactive</span>
+        <h2>The Shastra <span class="accent">Evolution</span></h2>
+        <p>Toggle between ancient and modern approaches</p>
+    </div>
+    <div class="toggle-row">
+        <span class="toggle-label" id="label-ancient">Ancient</span>
+        <label class="switch">
+            <input type="checkbox" id="codeToggle">
+            <span class="slider round"></span>
+        </label>
+        <span class="toggle-label" id="label-modern">Modern</span>
+    </div>
+    <div class="code-display">
+        <div class="code-header-bar">
+            <div class="code-dots">
+                <span class="dot r"></span>
+                <span class="dot y"></span>
+                <span class="dot g"></span>
+            </div>
+            <span class="code-lang-tag" id="codeLangTag">Ancient Java</span>
+        </div>
+        <pre id="codeBlock" class="code-body"></pre>
+    </div>
+</section>
+
+<!-- ===================== ROADMAPS ===================== -->
+<section id="roadmaps" class="roadmaps-section">
+    <div class="section-header">
+        <span class="section-tag">Learning Paths</span>
+        <h2>Explore <span class="accent">Roadmaps</span></h2>
+        <p>Click any card to view the full roadmap</p>
+    </div>
+    <div class="grid">
+        <div class="card" data-img="Road map java.jpg" data-title="Java Roadmap">
+            <div class="card-icon">&#x2615;</div>
+            <img src="Road map java.jpg" alt="Java Roadmap" loading="lazy">
+            <h3>Java</h3>
+            <p>Focus: Loom &amp; GraalVM</p>
+            <span class="card-badge">Upcoming Standard</span>
+        </div>
+        <div class="card" data-img="road map of python.jpg" data-title="Python Roadmap">
+            <div class="card-icon">&#x1F40D;</div>
+            <img src="road map of python.jpg" alt="Python Roadmap" loading="lazy">
+            <h3>Python</h3>
+            <p>Focus: PyTorch &amp; FastAPI</p>
+            <span class="card-badge">Upcoming Standard</span>
+        </div>
+        <div class="card" data-img="road map of react.png" data-title="React Roadmap">
+            <div class="card-icon">&#x269B;&#xFE0F;</div>
+            <img src="road map of react.png" alt="React Roadmap" loading="lazy">
+            <h3>React</h3>
+            <p>Focus: Server Components</p>
+            <span class="card-badge">Upcoming Standard</span>
+        </div>
+        <div class="card" data-img="road map of sql.jpg" data-title="SQL Roadmap">
+            <div class="card-icon">&#x1F5C4;&#xFE0F;</div>
+            <img src="road map of sql.jpg" alt="SQL Roadmap" loading="lazy">
+            <h3>SQL</h3>
+            <p>Focus: Vector DBs</p>
+            <span class="card-badge">Upcoming Standard</span>
+        </div>
+        <div class="card" data-img="roadmap of csharp.jpg" data-title="C# Roadmap">
+            <div class="card-icon">&#x1F537;</div>
+            <img src="roadmap of csharp.jpg" alt="C# Roadmap" loading="lazy">
+            <h3>C#</h3>
+            <p>Focus: Backend Development</p>
+            <span class="card-badge">Upcoming Standard</span>
+        </div>
+    </div>
+    <div class="view-all">
+        <a href="roadmap.html" class="btn-primary">View All Roadmaps</a>
+    </div>
+</section>
+
+<!-- ===================== ABOUT ===================== -->
+<section id="about" class="about-section">
+    <div class="about-inner">
+        <div class="about-text">
+            <span class="section-tag">About Us</span>
+            <h2>What is <span class="accent">ShastraCode</span>?</h2>
+            <p>ShastraCode is an innovative platform dedicated to transforming traditional coding education into a modern learning experience. We focus on teaching contemporary programming languages and technologies preparing learners for the demands of the upcoming engineering era.</p>
+            <p>Our mission is to bridge the gap between ancient coding practices and modern development needs by providing comprehensive roadmaps, hands-on projects, and a supportive community.</p>
+            <div class="about-actions">
+                <button id="joinBtnAbout" class="btn-primary">Join the Community</button>
+                <a href="portfolio.html" class="btn-ghost">View Portfolio</a>
+            </div>
+        </div>
+        <div class="about-visual">
+            <div class="about-feature-list">
+                <div class="feature-item">
+                    <span class="feature-icon">&#x1F5FA;&#xFE0F;</span>
+                    <div>
+                        <strong>Structured Roadmaps</strong>
+                        <p>Step-by-step learning paths for every language</p>
+                    </div>
+                </div>
+                <div class="feature-item">
+                    <span class="feature-icon">&#x1F465;</span>
+                    <div>
+                        <strong>Active Community</strong>
+                        <p>Learn together on WhatsApp &amp; Instagram</p>
+                    </div>
+                </div>
+                <div class="feature-item">
+                    <span class="feature-icon">&#x26A1;</span>
+                    <div>
+                        <strong>Modern Stack</strong>
+                        <p>Always aligned with industry standards</p>
+                    </div>
+                </div>
+                <div class="feature-item">
+                    <span class="feature-icon">&#x1F193;</span>
+                    <div>
+                        <strong>100% Free</strong>
+                        <p>All resources accessible at no cost</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- ===================== CONTACT ===================== -->
+<section id="contact" class="contact-section">
+    <div class="section-header">
+        <span class="section-tag">Get In Touch</span>
+        <h2>Connect With <span class="accent">Us</span></h2>
+        <p>Reach out via WhatsApp or Email — we respond fast!</p>
+    </div>
+    <div class="contact-cards">
+        <!-- WhatsApp Card -->
+        <a href="https://wa.me/917652824173?text=Hi%20ShastraCode!%20I'd%20like%20to%20know%20more."
+           target="_blank"
+           rel="noopener noreferrer"
+           class="contact-card whatsapp-card"
+           id="whatsappContactCard">
+            <div class="contact-card-icon whatsapp-icon">
+                <svg viewBox="0 0 32 32" fill="currentColor" width="40" height="40">
+                    <path d="M16 1C7.73 1 1 7.73 1 16c0 2.82.74 5.45 2.03 7.74L1 31l7.49-2.02A15 15 0 0 0 16 31c8.27 0 15-6.73 15-15S24.27 1 16 1zm6.85 18.18c-.37-.19-2.21-1.09-2.55-1.21-.34-.12-.59-.19-.84.19-.25.37-.96 1.21-1.18 1.46-.21.25-.43.28-.8.09-.37-.19-1.57-.58-2.99-1.85-1.1-.98-1.85-2.2-2.07-2.57-.21-.37-.02-.57.16-.75.17-.17.37-.43.56-.65.19-.22.25-.37.37-.62.12-.25.06-.47-.03-.65-.09-.19-.84-2.02-1.15-2.77-.3-.72-.61-.62-.84-.63-.21-.01-.46-.01-.71-.01-.25 0-.65.09-.99.47-.34.37-1.3 1.27-1.3 3.1s1.33 3.6 1.52 3.85c.19.25 2.62 4 6.35 5.45.89.38 1.58.61 2.12.78.89.28 1.7.24 2.34.15.71-.11 2.21-.9 2.52-1.78.31-.87.31-1.62.22-1.78-.09-.16-.34-.25-.71-.44z"/>
+                </svg>
+            </div>
+            <div class="contact-card-body">
+                <h3>WhatsApp</h3>
+                <p>Chat with us directly for quick support and community updates.</p>
+                <span class="contact-cta">Open WhatsApp &#x2192;</span>
+            </div>
+        </a>
+
+        <a href="https://mail.google.com/mail/?view=cm&to=shastracode312908@gmail.com&su=Hello%20ShastraCode&body=Hi%20ShastraCode%20team,"
+           target="_blank"
+           rel="noopener noreferrer"
+           class="contact-card email-card"
+           id="emailContactCard">
+            <div class="contact-card-icon email-icon">
+                <svg viewBox="0 0 32 32" fill="currentColor" width="40" height="40">
+                    <path d="M28 6H4a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h24a2 2 0 0 0 2-2V8a2 2 0 0 0-2-2zm-1.2 2L16 15.77 5.2 8h21.6zM4 24V9.37l11.45 8.26a1 1 0 0 0 1.1 0L28 9.37V24H4z"/>
+                </svg>
+            </div>
+            <div class="contact-card-body">
+                <span class="email-badge">&#x2605; Preferred Contact</span>
+                <h3>Email Us</h3>
+                <p>Send us an email for collaborations, queries, or feedback. We reply within 24 hours.</p>
+                <span class="contact-cta">Send Email &#x2192;</span>
+            </div>
+        </a>
+    </div>
+</section>
+
+<!-- ===================== IMAGE MODAL ===================== -->
+<div id="imageModal" class="modal" role="dialog" aria-modal="true">
+    <div class="modal-inner">
+        <button class="modal-close" id="modalClose" aria-label="Close">&times;</button>
+        <p class="modal-title" id="modalTitle"></p>
+        <img class="modal-content" id="modalImg" alt="Roadmap detail">
+    </div>
+</div>
+
+<!-- ===================== COMMUNITY MODAL ===================== -->
+<div id="communityModal" class="community-modal" role="dialog" aria-modal="true">
+    <div class="community-box">
+        <button class="modal-close community-close" id="closeCommunity" aria-label="Close">&times;</button>
+        <div class="community-icon-wrap">&#x1F310;</div>
+        <h2>Join Our Community</h2>
+        <p class="community-sub">Connect with fellow learners on your favourite platform</p>
+        <div class="community-links">
+            <a href="https://ig.me/j/AbYziWUjoGdrCdl3/" target="_blank" rel="noopener noreferrer" class="community-link instagram" id="instagramLink">
+                <svg viewBox="0 0 24 24" fill="currentColor" width="20" height="20">
+                    <path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zM12 0C8.741 0 8.333.014 7.053.072 2.695.272.273 2.69.073 7.052.014 8.333 0 8.741 0 12c0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98C8.333 23.986 8.741 24 12 24c3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98C15.668.014 15.259 0 12 0zm0 5.838a6.162 6.162 0 1 0 0 12.324 6.162 6.162 0 0 0 0-12.324zM12 16a4 4 0 1 1 0-8 4 4 0 0 1 0 8zm6.406-11.845a1.44 1.44 0 1 0 0 2.881 1.44 1.44 0 0 0 0-2.881z"/>
+                </svg>
+                Join on Instagram
+            </a>
+            <a href="https://chat.whatsapp.com/DwNeKzcWSHOH3y70Utm0xL" target="_blank" rel="noopener noreferrer" class="community-link whatsapp" id="whatsappCommunityLink">
+                <svg viewBox="0 0 32 32" fill="currentColor" width="20" height="20">
+                    <path d="M16 1C7.73 1 1 7.73 1 16c0 2.82.74 5.45 2.03 7.74L1 31l7.49-2.02A15 15 0 0 0 16 31c8.27 0 15-6.73 15-15S24.27 1 16 1zm6.85 18.18c-.37-.19-2.21-1.09-2.55-1.21-.34-.12-.59-.19-.84.19-.25.37-.96 1.21-1.18 1.46-.21.25-.43.28-.8.09-.37-.19-1.57-.58-2.99-1.85-1.1-.98-1.85-2.2-2.07-2.57-.21-.37-.02-.57.16-.75.17-.17.37-.43.56-.65.19-.22.25-.37.37-.62.12-.25.06-.47-.03-.65-.09-.19-.84-2.02-1.15-2.77-.3-.72-.61-.62-.84-.63-.21-.01-.46-.01-.71-.01-.25 0-.65.09-.99.47-.34.37-1.3 1.27-1.3 3.1s1.33 3.6 1.52 3.85c.19.25 2.62 4 6.35 5.45.89.38 1.58.61 2.12.78.89.28 1.7.24 2.34.15.71-.11 2.21-.9 2.52-1.78.31-.87.31-1.62.22-1.78-.09-.16-.34-.25-.71-.44z"/>
+                </svg>
+                Join on WhatsApp
+            </a>
+            <a href="https://mail.google.com/mail/?view=cm&to=shastracode312908@gmail.com&su=Hello%20ShastraCode&body=Hi%20ShastraCode%20team," target="_blank" rel="noopener noreferrer" class="community-link email" id="emailCommunityLink" style="background:rgba(0,209,255,0.10);border-color:rgba(0,209,255,0.4);color:#00d1ff;">
+                <svg viewBox="0 0 32 32" fill="currentColor" width="20" height="20">
+                    <path d="M28 6H4a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h24a2 2 0 0 0 2-2V8a2 2 0 0 0-2-2zm-1.2 2L16 15.77 5.2 8h21.6zM4 24V9.37l11.45 8.26a1 1 0 0 0 1.1 0L28 9.37V24H4z"/>
+                </svg>
+                &#x2605; Send us an Email
+            </a>
+        </div>
+    </div>
+</div>
+
+<!-- ===================== FLOATING WHATSAPP BUTTON ===================== -->
+<a href="https://wa.me/917652824173?text=Hi%20ShastraCode!%20I'd%20like%20to%20know%20more."
+   target="_blank"
+   rel="noopener noreferrer"
+   class="whatsapp-float"
+   id="whatsappFloat"
+   aria-label="Chat on WhatsApp">
+    <svg viewBox="0 0 32 32" fill="white" width="28" height="28">
+        <path d="M16 1C7.73 1 1 7.73 1 16c0 2.82.74 5.45 2.03 7.74L1 31l7.49-2.02A15 15 0 0 0 16 31c8.27 0 15-6.73 15-15S24.27 1 16 1zm6.85 18.18c-.37-.19-2.21-1.09-2.55-1.21-.34-.12-.59-.19-.84.19-.25.37-.96 1.21-1.18 1.46-.21.25-.43.28-.8.09-.37-.19-1.57-.58-2.99-1.85-1.1-.98-1.85-2.2-2.07-2.57-.21-.37-.02-.57.16-.75.17-.17.37-.43.56-.65.19-.22.25-.37.37-.62.12-.25.06-.47-.03-.65-.09-.19-.84-2.02-1.15-2.77-.3-.72-.61-.62-.84-.63-.21-.01-.46-.01-.71-.01-.25 0-.65.09-.99.47-.34.37-1.3 1.27-1.3 3.1s1.33 3.6 1.52 3.85c.19.25 2.62 4 6.35 5.45.89.38 1.58.61 2.12.78.89.28 1.7.24 2.34.15.71-.11 2.21-.9 2.52-1.78.31-.87.31-1.62.22-1.78-.09-.16-.34-.25-.71-.44z"/>
+    </svg>
+    <span class="whatsapp-tooltip">Chat with us!</span>
+</a>
+
+<!-- ===================== FOOTER ===================== -->
+<footer class="footer">
+    <div class="footer-inner">
+        <div class="footer-brand">
+            <span class="logo-text footer-logo-text">SHASTRA<span class="accent">CODE</span></span>
+            <p>No Ancient Code. Just Modern Terms.</p>
+            <div class="footer-socials">
+                <a href="https://ig.me/j/AbYziWUjoGdrCdl3/" target="_blank" rel="noopener noreferrer" aria-label="Instagram" class="social-icon">
+                    <svg viewBox="0 0 24 24" fill="currentColor" width="20" height="20">
+                        <path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zM12 0C8.741 0 8.333.014 7.053.072 2.695.272.273 2.69.073 7.052.014 8.333 0 8.741 0 12c0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98C8.333 23.986 8.741 24 12 24c3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98C15.668.014 15.259 0 12 0zm0 5.838a6.162 6.162 0 1 0 0 12.324 6.162 6.162 0 0 0 0-12.324zM12 16a4 4 0 1 1 0-8 4 4 0 0 1 0 8zm6.406-11.845a1.44 1.44 0 1 0 0 2.881 1.44 1.44 0 0 0 0-2.881z"/>
+                    </svg>
+                </a>
+                <a href="https://chat.whatsapp.com/DwNeKzcWSHOH3y70Utm0xL" target="_blank" rel="noopener noreferrer" aria-label="WhatsApp" class="social-icon">
+                    <svg viewBox="0 0 32 32" fill="currentColor" width="20" height="20">
+                        <path d="M16 1C7.73 1 1 7.73 1 16c0 2.82.74 5.45 2.03 7.74L1 31l7.49-2.02A15 15 0 0 0 16 31c8.27 0 15-6.73 15-15S24.27 1 16 1zm6.85 18.18c-.37-.19-2.21-1.09-2.55-1.21-.34-.12-.59-.19-.84.19-.25.37-.96 1.21-1.18 1.46-.21.25-.43.28-.8.09-.37-.19-1.57-.58-2.99-1.85-1.1-.98-1.85-2.2-2.07-2.57-.21-.37-.02-.57.16-.75.17-.17.37-.43.56-.65.19-.22.25-.37.37-.62.12-.25.06-.47-.03-.65-.09-.19-.84-2.02-1.15-2.77-.3-.72-.61-.62-.84-.63-.21-.01-.46-.01-.71-.01-.25 0-.65.09-.99.47-.34.37-1.3 1.27-1.3 3.1s1.33 3.6 1.52 3.85c.19.25 2.62 4 6.35 5.45.89.38 1.58.61 2.12.78.89.28 1.7.24 2.34.15.71-.11 2.21-.9 2.52-1.78.31-.87.31-1.62.22-1.78-.09-.16-.34-.25-.71-.44z"/>
+                    </svg>
+                </a>
+                <a href="mailto:shastracode312908@gmail.com" aria-label="Email" class="social-icon">
+                    <svg viewBox="0 0 32 32" fill="currentColor" width="20" height="20">
+                        <path d="M28 6H4a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h24a2 2 0 0 0 2-2V8a2 2 0 0 0-2-2zm-1.2 2L16 15.77 5.2 8h21.6zM4 24V9.37l11.45 8.26a1 1 0 0 0 1.1 0L28 9.37V24H4z"/>
+                    </svg>
+                </a>
+            </div>
+        </div>
+        <div class="footer-links-col">
+            <strong>Navigate</strong>
+            <a href="#roadmaps">Roadmaps</a>
+            <a href="#about">About</a>
+            <a href="#contact">Contact</a>
+            <a href="portfolio.html">Portfolio</a>
+        </div>
+        <div class="footer-links-col">
+            <strong>Community</strong>
+            <a href="https://ig.me/j/AbYziWUjoGdrCdl3/" target="_blank" rel="noopener noreferrer">Instagram</a>
+            <a href="https://chat.whatsapp.com/DwNeKzcWSHOH3y70Utm0xL" target="_blank" rel="noopener noreferrer">WhatsApp Group</a>
+        </div>
+        <div class="footer-links-col">
+            <strong>Contact</strong>
+            <a href="https://wa.me/917652824173" target="_blank" rel="noopener noreferrer">&#x1F4F1; WhatsApp</a>
+            <a href="mailto:shastracode312908@gmail.com">&#x2709;&#xFE0F; shastracode312908@gmail.com</a>
+        </div>
+    </div>
+    <div class="footer-bottom">
+        <p>&copy; 2025 ShastraCode. All rights reserved.</p>
+    </div>
+</footer>
+
+<script src="script.js"></script>
+</body>
+</html>
